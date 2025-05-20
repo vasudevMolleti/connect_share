@@ -1,0 +1,86 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.75rem;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-hive-black text-foreground antialiased;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-hive-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-hive-gray rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-hive-light-gray;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-hive-gray/40 backdrop-blur-md border border-white/10;
+  }
+  
+  .hive-card {
+    @apply bg-hive-dark rounded-xl border border-hive-gray/50 p-4 hover:border-emerald-500/30 transition-colors;
+  }
+  
+  .connect-button-primary {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .connect-button-secondary {
+    @apply bg-hive-gray hover:bg-hive-light-gray text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent;
+  }
+}
